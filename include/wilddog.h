@@ -88,7 +88,7 @@ STATIC const char *s_debug[] = {
 };
 
 #define wilddog_debug_level(level, format,...) do{if(level >= DEBUG_LEVEL){ \
-    printf("%s:func:%s LINE: %d: "format"\r\n",s_debug[level],__func__, __LINE__, ##__VA_ARGS__); \
+    printf("%s:func:%s LINE: %d: " format "\r\n",s_debug[level],__func__, __LINE__, ##__VA_ARGS__); \
     }}while(0)
 
 #define wilddog_debug(format,...) wilddog_debug_level(WD_DEBUG_DEBUG, \

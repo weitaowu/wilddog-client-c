@@ -20,19 +20,19 @@ extern "C"
 * define the machine's address type
 */
 #ifndef WILDDOG_MACHINE_BITS
-#define WILDDOG_MACHINE_BITS 32
+#define WILDDOG_MACHINE_BITS 64
 #endif
 /*
 * define the appliance layer's protocol maximum size.
 */
 #ifndef WILDDOG_PROTO_MAXSIZE
-#define WILDDOG_PROTO_MAXSIZE 1280
+#define WILDDOG_PROTO_MAXSIZE 1024000
 #endif
 /*
 * define the maximum request queue number, means how many packets can be send/observed .
 */
 #ifndef WILDDOG_REQ_QUEUE_NUM
-#define WILDDOG_REQ_QUEUE_NUM 32
+#define WILDDOG_REQ_QUEUE_NUM 100000
 #endif
 /*
 * define the maximum transmit time, in ms
@@ -44,7 +44,7 @@ extern "C"
 * define the maximum receive time per host during one wilddog_trySync() period, in ms
 */
 #ifndef WILDDOG_RECEIVE_TIMEOUT
-#define WILDDOG_RECEIVE_TIMEOUT 100
+#define WILDDOG_RECEIVE_TIMEOUT 10
 #endif
 
 #ifdef __cplusplus
